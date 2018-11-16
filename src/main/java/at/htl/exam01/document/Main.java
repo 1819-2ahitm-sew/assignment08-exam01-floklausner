@@ -1,6 +1,11 @@
 package at.htl.exam01.document;
 
+import java.util.Scanner;
+
 public class Main {
+
+
+
 
     /**
      *
@@ -22,9 +27,13 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String[] dokument = new String[1000];
+
+        for (int i = 0; i < dokument.length; i++) {
 
 
+        }
     }
-
-
 }

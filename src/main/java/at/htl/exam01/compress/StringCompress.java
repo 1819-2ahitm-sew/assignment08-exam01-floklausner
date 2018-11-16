@@ -8,18 +8,25 @@ public class StringCompress {
 
     private static final String FILE_NAME = "sample.txt";
 
+    public String reasFromFile(String fileName) {
+
+        return null;
+    }
+
     /**
      * Main-Methode, hier wird das StringCompress-Objekt erstellt
      * und die Methoden des Objekts werden aufgerufen
      *
      * @param args
      */
+
     public static void main(String[] args) {
+
         StringCompress sc = new StringCompress();
         String[] text = sc.readFromFile(FILE_NAME);
         sc.print(text);
-    }
 
+    }
 
     /**
      *
@@ -40,12 +47,39 @@ public class StringCompress {
      * @param fileName
      * @return String-Array mit dem entpacktem Text
      */
-    public String[] readFromFile(String fileName) {
 
+    public String readFromFile(String fileName) {
 
-        return null;
+        StringBuilder sb = new StringBuilder();
+
+        try (Scanner scanner = new Scanner(new FileReader(fileName))) {
+
+            while(scanner.hasNextLine()) {
+                sb.append(scanner.nextLine());
+                sb.append("\n");
+            }
+
+        } catch(FileNotFoundException e) {
+            System.err.println(e.getMessage());
+        }
+        return sb.toString();
     }
 
+
+    public int getNoOfLines(String fileName) {
+
+        String[] lines = new String[1000];
+        int count = 0;
+
+        try (Scanner scanner = new Scanner(new FileReader(fileName))) {
+            while (scanner.hasNextLine()) {
+                count++;
+            }
+        } catch (FileNotFoundException e) {
+            System.err.println(e.getMessage());
+        }
+        return count;
+    }
 
     /**
      * Der Inhalt des String-Arrays wird zeilenweise auf der Console ausgegeben
@@ -53,8 +87,12 @@ public class StringCompress {
      *
      * @param lines String-Array
      */
+
     public void print(String[] lines) {
 
+        for (int i = 0; i < lines.length; i++) {
+            System.out.println(lines[i]);
+        }
     }
 
     /**
@@ -63,9 +101,6 @@ public class StringCompress {
      * @param fileName
      * @return Anzahl der Zeilen in der Textdatei
      */
-    public int getNoOfLines(String fileName) {
 
 
-        return -1;
-    }
 }
