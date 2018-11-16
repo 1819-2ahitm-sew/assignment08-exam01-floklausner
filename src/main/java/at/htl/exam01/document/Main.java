@@ -6,7 +6,6 @@ public class Main {
 
 
 
-
     /**
      *
      * Führen Sie hier folgendes durch:
@@ -29,11 +28,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String[] dokument = new String[1000];
+        String[] dokument = new String[100];
 
         for (int i = 0; i < dokument.length; i++) {
-
-
+            System.out.println(dokument[i]);
         }
     }
 }

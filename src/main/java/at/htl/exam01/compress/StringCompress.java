@@ -1,3 +1,4 @@
+
 package at.htl.exam01.compress;
 
 import java.io.FileNotFoundException;
@@ -23,8 +24,8 @@ public class StringCompress {
     public static void main(String[] args) {
 
         StringCompress sc = new StringCompress();
-        String[] text = sc.readFromFile(FILE_NAME);
-        sc.print(text);
+        //String[] text = sc.readFromFile(FILE_NAME);
+        //sc.print(text);
 
     }
 
@@ -104,3 +105,5 @@ public class StringCompress {
 
 
 }
+
+

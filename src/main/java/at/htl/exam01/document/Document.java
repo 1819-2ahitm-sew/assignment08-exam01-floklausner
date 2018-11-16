@@ -1,6 +1,6 @@
 package at.htl.exam01.document;
 
-public class Document {
+public abstract class Document {
 
     public String author;
 
